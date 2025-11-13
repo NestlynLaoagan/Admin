@@ -1,34 +1,31 @@
-import { useState } from 'react';
-import { Dashboard } from './components/Dashboard';
-import { ProfilingSummary } from './components/ProfilingSummary';
-import { DemographicsOverview } from './components/DemographicsOverview';
-import { Projects } from './components/Projects';
-import { Reports } from './components/Reports';
-import { Events } from './components/Events';
-import { Feedback } from './components/Feedback';
-import { AIChatbot } from './components/AIChatbot';
-import { Sidebar } from './components/Sidebar';
+import { useState } from "react";
+import { Dashboard } from "./components/Dashboard";
+import { ProfilingSummary } from "./components/ProfilingSummary";
+import { Projects } from "./components/Projects";
+import { Reports } from "./components/Reports";
+import { Events } from "./components/Events";
+import { Feedback } from "./components/Feedback";
+import { AIChatbot } from "./components/AIChatbot";
+import { Sidebar } from "./components/Sidebar";
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
 
   const renderContent = () => {
     switch (activeSection) {
-      case 'home':
+      case "home":
         return <Dashboard />;
-      case 'profiling':
+      case "profiling":
         return <ProfilingSummary />;
-      case 'demographics':
-        return <DemographicsOverview />;
-      case 'projects':
+      case "projects":
         return <Projects />;
-      case 'reports':
+      case "reports":
         return <Reports />;
-      case 'events':
+      case "events":
         return <Events />;
-      case 'feedback':
+      case "feedback":
         return <Feedback />;
-      case 'ai-chatbot':
+      case "ai-chatbot":
         return <AIChatbot />;
       default:
         return <Dashboard />;
@@ -37,10 +34,11 @@ export default function App() {
 
   return (
     <div className="flex min-h-screen bg-white">
-      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
-      <main className="flex-1 p-8">
-        {renderContent()}
-      </main>
+      <Sidebar
+        activeSection={activeSection}
+        setActiveSection={setActiveSection}
+      />
+      <main className="flex-1 p-8">{renderContent()}</main>
     </div>
   );
 }

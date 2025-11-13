@@ -7,7 +7,6 @@ export function Sidebar({ activeSection, setActiveSection }: SidebarProps) {
   const menuItems = [
     { id: 'home', label: 'Home' },
     { id: 'profiling', label: 'Profiling Summary' },
-    { id: 'demographics', label: 'Demographics' },
     { id: 'projects', label: 'Projects' },
     { id: 'reports', label: 'Reports' },
     { id: 'events', label: 'Events' },
