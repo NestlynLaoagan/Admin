@@ -7,9 +7,19 @@ import { Events } from "./components/Events";
 import { Feedback } from "./components/Feedback";
 import { AIChatbot } from "./components/AIChatbot";
 import { Sidebar } from "./components/Sidebar";
+import { Login } from "./components/Login";
 
 export default function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
+  if (!isAuthenticated) {
+    return <Login onLogin={handleLogin} />;
+  }
 
   const renderContent = () => {
     switch (activeSection) {
