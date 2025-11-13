@@ -1,7 +1,7 @@
 
-  # Access Request
+  # SK Admin Dashboard
 
-  This is a code bundle for Access Request. The original project is available at https://www.figma.com/design/aaZlVOgyBuHNvL9Kh7qdLk/Access-Request.
+  This is a code bundle for SK Admin Dashboard. The original project is available at https://www.figma.com/design/aaZlVOgyBuHNvL9Kh7qdLk/SK-Admin-Dashboard.
 
   ## Running the code
 
